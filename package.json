@@ -1,6 +1,7 @@
 {
   "name": "rextrem",
   "version": "0.1.0",
+  "description": "Simple Platform IoT with React",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -17,6 +18,18 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pacoDan/rextremGateway.git"
+  },
+  "keywords": [
+    "IoT",
+    "Node",
+    "MQTT",
+    "Arduino",
+    "React"
+  ],
+  "author": "Jhon Daniel Olmedo Paco",
   "eslintConfig": {
     "extends": [
       "react-app",
