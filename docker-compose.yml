@@ -3,4 +3,4 @@ services:
   web:
     build: ./frontend-portal
     ports:
-      - "5000:3000"
+      - "4000:4000"
