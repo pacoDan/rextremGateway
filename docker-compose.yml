@@ -1,6 +1,6 @@
 version: '3'
 services:
   web:
-    build: .
+    build: ./frontend-portal
     ports:
-      - "3000:3000"
+      - "5000:3000"

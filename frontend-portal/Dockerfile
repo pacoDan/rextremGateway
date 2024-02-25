@@ -9,17 +9,23 @@ FROM jhonpaco/node AS development
 WORKDIR /app
 
 # Clona el repositorio de GitHub dentro del contenedor
-RUN git clone https://github.com/pacoDan/rextremGateway.git .
+# RUN git clone https://github.com/pacoDan/rextremGateway.git .
 
-
+# Copia los archivos de configuración y dependencias del proyecto
+# COPY portal-frontend/package.json portal-frontend/package-lock.json ./
 # Copy dependency definitions
 #COPY public/ ./public/
 #COPY src/ ./src/
 #COPY package.json ./
 #COPY package-lock.json ./
+# Copia los archivos de la aplicación al contenedor
+COPY ./ ./
 
 # Install dependencies
 RUN npm install
+
+# Construye la aplicación React
+RUN npm run build
 
 # Expose the port the app runs in
 EXPOSE 3000
