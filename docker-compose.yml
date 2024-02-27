@@ -11,3 +11,7 @@ services:
       MYSQL_DATABASE: mysql
     ports:
       - "3306:3306"
+  brokerdotnet:
+    build: ./MyBroker2DotNet
+    ports:
+      - "8080:8080"
