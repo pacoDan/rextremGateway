@@ -1,13 +1,27 @@
 const express = require("express");
 const app = express();
+// import { myDataSource } from "./app-data-source"
+const { myDataSource } = require("./app-data-source.ts");
+// import { User } from "./entity/User"
+
+// establish database connection
+myDataSource
+    .initialize()
+    .then(() => {
+        console.log("Data Source has been initialized!")
+    })
+    .catch((err) => {
+        console.error("Error during Data Source initialization:", err)
+    })
 
 // Middleware para manejar el cuerpo de las solicitudes JSON
 app.use(express.json());
 
 // Rutas
-app.get("/users", (req, res) => {
+app.get("/users",  (req, res) => {
     // Lógica para obtener y devolver todos los usuarios
     const users = []; // Aquí deberías obtener los usuarios desde tu base de datos u otra fuente de datos
+    // const users = await myDataSource.getRepository(User).find()
     res.json(users);
 });
 
