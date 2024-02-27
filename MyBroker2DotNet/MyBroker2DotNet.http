@@ -1,0 +1,6 @@
+@MyBroker2DotNet_HostAddress = http://localhost:5189
+
+GET {{MyBroker2DotNet_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

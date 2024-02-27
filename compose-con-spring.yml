@@ -5,17 +5,15 @@ services:
     ports:
       - "4000:4000"
   mybroker:
-    build: ./MyBroker2
+    build: ./MyBroker2/
     ports:
       - "8080:8080"
     depends_on:
-    - mysql
+      - mysql
   mysql:
     image: jhonpaco/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 1234
       MYSQL_DATABASE: mysql
-      MYSQL_USER: root
-      MYSQL_PASSWORD: 1234
     ports:
       - "3306:3306"
