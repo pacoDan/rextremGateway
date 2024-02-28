@@ -7,7 +7,7 @@ WORKDIR /app
 # Copiamos los archivos fuente al contenedor
 COPY . .
 
-RUN ./gradlew clean test --info
+#RUN ./gradlew clean test --info
 
 # Compilamos el proyecto con Gradle
 RUN ./gradlew build --info
